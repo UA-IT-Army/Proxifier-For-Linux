@@ -38,6 +38,36 @@ After installing dependencies, obtaining Proxifier sources, and changing to the 
     $ sudo make uninstall
     $ sudo make install
 
+
+## Docker-based build (kali)
+
+```shell
+docker build -t proxifier .
+```
+
+launch two terminal windows.
+
+in first window:
+
+```shell
+docker run --name=proxifier -it --rm proxifier
+```
+
+in second window:
+
+```shell
+docker cp proxifier:/srv/app .
+tar -czf proxifier.tgz -C app usr
+```
+
+file `proxifier.tgz` now contains proxifier deployment.
+
+On target node simply do this:
+
+```shell
+tar -xzf proxifier.tgz -C /
+```
+
 ## Usage
 Proxifier service can be enabled as follows:
 
