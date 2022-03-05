@@ -39,11 +39,22 @@ After installing dependencies, obtaining Proxifier sources, and changing to the 
     $ sudo make install
 
 
-## Docker-based build (kali)
+## Docker-based build 
+
+Default base image is Kali Linux. If you'd like to change base image (Debian based), supply `BASE` argument.
+
+To build Kali image:
 
 ```shell
 docker build -t proxifier .
 ```
+
+To build Debian image:
+
+```shell
+docker build --build-arg BASE=debian -t proxifier .
+```
+
 
 launch two terminal windows.
 

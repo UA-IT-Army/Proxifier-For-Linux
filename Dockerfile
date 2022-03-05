@@ -1,4 +1,5 @@
-FROM kalilinux/kali-rolling as build
+ARG BASE=kalilinux/kali-rolling
+FROM $BASE as build
 
 RUN apt-get update -y && apt-get install -y autoconf automake txt2man gcc make
 RUN mkdir -p /srv/src /srv/app
