@@ -46,13 +46,13 @@ Default base image is Kali Linux. If you'd like to change base image (Debian bas
 To build Kali image:
 
 ```shell
-docker build -t proxifier .
+docker build -t proxifier -f Dockerfile.debian .
 ```
 
 To build Debian image:
 
 ```shell
-docker build --build-arg BASE=debian -t proxifier .
+docker build --build-arg BASE=debian -t proxifier -f Dockerfile.debian .
 ```
 
 
