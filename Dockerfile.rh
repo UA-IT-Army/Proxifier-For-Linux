@@ -1,0 +1,11 @@
+ARG BASE=fedora
+FROM $BASE as build
+
+RUN dnf update -y && dnf install -y autoconf automake txt2man gcc make
+RUN mkdir -p /srv/src /srv/app
+COPY . /srv/src
+WORKDIR /srv/src
+RUN autoreconf -vfi \
+    && ./configure --disable-dependency-tracking \
+    && make DESTDIR=/srv/app all \
+    && make DESTDIR=/srv/app install
