@@ -41,34 +41,8 @@ After installing dependencies, obtaining Proxifier sources, and changing to the 
 
 ## Docker-based build 
 
-Default base image is Kali Linux. If you'd like to change base image (Debian based), supply `BASE` argument.
-
-### Debian-based distributions
-
-To build Kali image:
-
 ```shell
-docker build -t proxifier -f Dockerfile.debian .
-```
-
-To build Debian image:
-
-```shell
-docker build --build-arg BASE=debian -t proxifier -f Dockerfile.debian .
-```
-
-### RedHat-based distributions
-
-To build Fedora image:
-
-```shell
-docker build -t proxifier -f Dockerfile.rh .
-```
-
-To build CentOS image:
-
-```shell
-docker build --build-arg BASE=centos -t proxifier -f Dockerfile.rh .
+./docker_build.sh
 ```
 
 ### Common tasks
