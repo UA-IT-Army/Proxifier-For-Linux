@@ -45,6 +45,8 @@ After installing dependencies, obtaining Proxifier sources, and changing to the 
 ./docker_build.sh
 ```
 
+script does try to guess OS to build for
+
 ### Common tasks
 
 launch two terminal windows.
